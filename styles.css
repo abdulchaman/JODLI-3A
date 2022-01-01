@@ -1,0 +1,352 @@
+:root {
+  --primary: #010017;
+  --secondary: #fc038c;
+  --dark: #0c0c0f;
+  --light: #ede6e6;
+  --card: linear-gradient(to bottom right, var(--dark), var(--light));
+  --box-shadow :0px 0px 10px 2px var(--light);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary);
+}
+a {
+  text-decoration: none;
+}
+h5 {
+  color: gray;
+  font-size: 0.8rem;
+}
+h4 {
+  color: gray;
+  font-size: 0.8rem;
+}
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+h3{
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+p {
+  color: gray;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+nav {
+  display: grid;
+  grid-template-areas: ". l l . m m m m m . s .";
+}
+.logo {
+  grid-area: l;
+  align-self: center;
+}
+.menu {
+  grid-area: m;
+}
+.start {
+  grid-area: s;
+  align-self: center;
+  justify-self: end;
+}
+.menu {
+  display: flex;
+  gap: 1rem;
+  color: white;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.menu a {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+.menu a:hover {
+  color: var(--secondary);
+}
+.active {
+  color: var(--secondary);
+}
+.logo img {
+  max-width: 300px;
+  width: 100%;
+}
+/* neon button */
+.neon-button {
+  font-size: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--secondary);
+  border: var(--secondary) 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--secondary), 0 0 0.5em 0 var(--secondary);
+  position: relative;
+}
+.neon-button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--secondary);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+.neon-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--secondary);
+  opacity: 0;
+  background-color: var(--secondary);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+.neon-button:hover,
+.neon-button:focus {
+  color: white;
+  text-shadow: none;
+}
+.neon-button:hover::before,
+.neon-button:focus::before {
+  opacity: 1;
+}
+.neon-button:hover::after,
+.neon-button:focus::after {
+  opacity: 1;
+}
+/* main section */
+main {
+  display: grid;
+  grid-template-areas: ". . . t t t t i i . .";
+  margin-top: 2rem;
+}
+.main-text-box {
+  grid-area: t;
+  display: grid;
+  grid-template-areas:
+    "s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 s1 s1"
+    "s2 s2 s2 . . . . s3 s3 s3 . .";
+}
+.main-text-sub-box1 {
+  grid-area: s1;
+}
+.main-text-sub-box2 {
+  grid-area: s2;
+  
+}
+.main-text-sub-box3 {
+  grid-area: s3;
+ 
+}
+.main-text-sub-box2 i {
+  font-size: 18px;
+  color: white;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  background: var(--card);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+.main-text-sub-box1 h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.main-text-sub-box1 h2 {
+  margin-bottom: 2rem;
+}
+.main-text-sub-box1 h1 > span {
+  color: var(--secondary);
+}
+.main-text-sub-box3 img {
+  width: 35px;
+  height: 35px;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  background: var(--card);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+.main-img-box {
+  grid-area: i;
+  margin-top: 2rem;
+}
+.main-img-sub-box {
+  background: var(--card);
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  max-width: 350px;
+  max-height: 400px;
+  margin-top: 2rem;
+}
+.main-img-sub-box img {
+  width: 100%;
+ height: 500px;
+  border-radius: 5px;
+  position: relative;
+  bottom: 100px;
+}
+/* sub-hero */
+.about{
+  display: flex;
+  gap: .5rem;
+  margin-top: 5rem;
+}
+.about-img-box{
+  flex: 5;
+  max-height: 500px;
+  max-width: 500px;
+  margin-right: 2.5rem;
+  background: var(--card);
+  box-shadow: var(--box-shadow) ;
+  border-radius: 5px;
+}
+.about-text-box{
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+.about-dummy1{
+  flex: 1;
+}
+.about-dummy2{
+  flex: 2;
+}
+.about-img-sub-box{
+  max-width: 500px;
+}
+.about-img-sub-box img{
+  width: 100%;
+  max-height: 500px;
+  border-radius: 5px;
+}
+.about-text-sub-box1 p{
+  line-height: 1.8;
+}
+/* contact section */
+.contact{
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.contact>div{
+  width: 60%;
+}
+.contact-header{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contact-header h4{
+  margin: 0;
+}
+.contact-header h3{
+  color: var(--light);
+}
+.contact-header hr{
+  width: 3%;
+  border:1px solid var(--secondary);
+  
+}
+.contact-main-box{
+  display: grid;
+  grid-template-areas:
+   "b1 b1 b1 b1 b1 b1 b1 b2 b2 b2 b2 b2"
+   "b3 b3 b3 b3 b3 b3 b3 b3 b3 b3 b3 b3";
+   
+}
+.contact-sub-box1{
+  grid-area: b1;
+  text-align: right;
+}
+.contact-sub-box2{
+  grid-area: b2;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.contact-sub-box3{
+  grid-area: b3;
+  text-align: center;
+  
+}
+.contact-sub-box1 input[type=text], input[type=email]{
+  width: 80%;
+  padding: .7rem 1.2rem;
+  
+  margin: .7rem 0 1.1rem;
+  background: var(--card);
+  box-shadow: 0px 1px 4px 0px var(--light);
+  color: var(--light);
+  font-size: .8rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.contact-sub-box2 textarea{
+  width: 80%;
+  padding: .7rem 1.2rem;
+  margin:.7rem 0;
+  margin-left: .9rem;
+  background: var(--card);
+  box-shadow: 0px 0px 6px 0px var(--light);
+  color: var(--light);
+  font-size: .8rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+  border: none;
+}
+.contact-sub-box3 button{
+  padding: .8rem 1.2rem;
+  color: var(--light);
+  background-color: var(--secondary);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: .7rem;
+  font-weight: bold;
+}
+::placeholder{
+  color: var(--light);
+  font-size: .7rem;
+  font-weight: bold;
+}
+

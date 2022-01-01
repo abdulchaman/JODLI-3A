@@ -14,5 +14,13 @@
     "express": "^4.17.2",
     "mongoose": "^6.1.4",
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulchaman/JODLI-3A.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abdulchaman/JODLI-3A/issues"
+  },
+  "homepage": "https://github.com/abdulchaman/JODLI-3A#readme"
 }
