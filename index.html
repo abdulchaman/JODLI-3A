@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JODLI 3A</title>
-
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -17,24 +16,39 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- nav-bar -->
-    <nav>
+    <nav class="topnav" id="navbar">
       <div class="logo">
-        <img src="images/logo (2).png" alt="" srcset="" height="" width="" />
+        <img class="desktop-logo" src="images/logo (2).png" alt="" srcset="" height="" width="" />
+        <img class="mobile-logo" src="images/logo (1).png" alt="" srcset="">
       </div>
-      <div class="menu">
+      <div class="nav-dummy"></div>
+      <div class="menu" id="myMenu">
         <a href="" class="active">Home</a>
         <a href="">About</a>
         <a href="">Courses</a>
         <a href="">Portfolio</a>
         <a href="">Challenges</a>
         <a href="">Contact</a>
+        <a href="javascript:void(0);" class="close-icon" onclick="closemobileNav()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
       <div class="start">
         <a href="" class="neon-button">Get Started</a>
       </div>
+      <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+        <i class="fa fa-bars"></i>
+      </a>
     </nav>
     <!-- main-section -->
     <main>
@@ -98,6 +112,205 @@
       </div>
       <div class="about-dummy2"></div>
     </section>
+    <!-- Courses Section -->
+    <section class="courses" id="myCourses">
+      <div class="courses-column courses-column1">
+        <div class="dummy-course"></div>
+        <div class="courses-box courses-box1">
+          <div class="courses-img-box">
+            <img src="images/Blender-tutorial2.png" alt="" srcset="" />
+          </div>
+          <div class="courses-text-box">
+            <span class="courses-tag">BLENDER</span>
+            <span class="courses-heart"><i class="far fa-heart"></i></span>
+            <span class="courses-enroll">480</span>
+            <h3>Your First Day in Blender 3D</h3>
+          </div>
+        </div>
+        <div class="courses-box courses-box2">
+          <div class="courses-img-box">
+            <img src="images/3D-tutorial.jpg" alt="" srcset="" />
+          </div>
+          <div class="courses-text-box">
+            <span class="courses-tag">BLENDER</span>
+            <span class="courses-heart"><i class="far fa-heart"></i></span>
+            <span class="courses-enroll">480</span>
+            <h3>Create & Design Modern Interior using Blender 2.8</h3>
+          </div>
+        </div>
+        <div class="courses-box courses-box3">
+          <div class="courses-img-box">
+            <img src="images/Blender-tutorial.png" alt="" srcset="" />
+          </div>
+          <div class="courses-text-box">
+            <span class="courses-tag">BLENDER</span>
+            <span class="courses-heart"><i class="far fa-heart"></i></span>
+            <span class="courses-enroll">480</span>
+            <h3>Learn 3D Modeling using sketc-up</h3>
+          </div>
+        </div>
+        <div class="dummy-course"></div>
+      </div>
+      <div class="courses-column courses-column2">
+        <div class="dummy-course"></div>
+        <div class="courses-box courses-box4">
+          <div class="courses-img-box">
+            <img src="images/Blendfer-corridor.png" alt="" srcset="" />
+          </div>
+          <div class="courses-text-box">
+            <span class="courses-tag">BLENDER</span>
+            <span class="courses-heart"><i class="far fa-heart"></i></span>
+            <span class="courses-enroll">480</span>
+            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h3>
+          </div>
+        </div>
+        <div class="courses-box courses-box5">
+          <div class="courses-img-box">
+            <img src="images/3D-graphics-design.png" alt="" srcset="" />
+          </div>
+          <div class="courses-text-box">
+            <span class="courses-tag">BLENDER</span>
+            <span class="courses-heart"><i class="far fa-heart"></i></span>
+            <span class="courses-enroll">480</span>
+            <h3>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Explicabo!
+            </h3>
+          </div>
+        </div>
+        <div class="courses-box courses-box6">
+          <div class="courses-img-box">
+            <img src="images/3d-tutorial2.jpg" alt="" srcset="" />
+          </div>
+          <div class="courses-text-box">
+            <span class="courses-tag">BLENDER</span>
+            <span class="courses-heart"><i class="far fa-heart"></i></span>
+            <span class="courses-enroll">480</span>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+          </div>
+        </div>
+        <div class="dummy-course"></div>
+      </div>
+    </section>
+    <!-- Testimonial section -->
+    <section class="testimonial" id="myTestimonial">
+      <div class="testimonial-heading">
+        <h4>Testimonials</h4>
+        <hr />
+        <h3>What They Says</h3>
+      </div>
+      <div class="swiper testimonialSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide testimonial-swiper-slide">
+            <img src="images/avtar1.png" alt="" srcset="" />
+            <span>Peter Parker</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              voluptatem cum optio asperiores, voluptate minima delectus nihil
+              eos explicabo tempora!
+            </p>
+          </div>
+          <div class="swiper-slide testimonial-swiper-slide">
+            <img src="images/avtar2.png" alt="" srcset="" />
+            <span>Joe Bidden</span>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              qui ipsam, in facere non eos. Architecto harum iste tempore
+              exercitationem?
+            </p>
+          </div>
+          <div class="swiper-slide testimonial-swiper-slide">
+            <img src="images/avtar3.png" alt="" srcset="" />
+            <span>Mitchel Parker</span>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis eligendi vel corrupti ipsum suscipit architecto
+              doloribus.
+            </p>
+          </div>
+          <div class="swiper-slide testimonial-swiper-slide">
+            <img src="images/avtar1.png" alt="" srcset="" />
+            <span>Peter Parker</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              voluptatem cum optio asperiores, voluptate minima delectus nihil
+              eos explicabo tempora!
+            </p>
+          </div>
+          <div class="swiper-slide testimonial-swiper-slide">
+            <img src="images/avtar2.png" alt="" srcset="" />
+            <span>Joe Bidden</span>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              qui ipsam, in facere non eos. Architecto harum iste tempore
+              exercitationem?
+            </p>
+          </div>
+          <div class="swiper-slide testimonial-swiper-slide">
+            <img src="images/avtar3.png" alt="" srcset="" />
+            <span>Brenden mcculam</span>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+              qui ipsam, in facere non eos. Architecto harum iste tempore
+              exercitationem?
+            </p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- Challenge Section -->
+    <section class="challenge" id="myChallenge">
+      <div class="challenge-heading">
+        <h4>Recent Challenges</h4>
+        <hr />
+        <h3>Lorem ipsum dolor sit amet.</h3>
+      </div>
+      <div class="challenge-column">
+        <div class="challenge-box">
+          <div class="challenge-img-box">
+            <img src="images/challlenge1.jpg" alt="" srcset="" />
+            <span class="live">Now Live</span>
+          </div>
+          <div class="challenge-text-box">
+            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam,
+              laborum.
+            </p>
+            <i class="fas fa-angle-right"></i>
+          </div>
+        </div>
+        <div class="challenge-box">
+          <div class="challenge-img-box">
+            <img src="images/challenge2.jpg" alt="" srcset="" />
+            <span class="live">Now Live</span>
+          </div>
+          <div class="challenge-text-box">
+            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam,
+              laborum.
+            </p>
+            <i class="fas fa-angle-right"></i>
+          </div>
+        </div>
+        <div class="challenge-box">
+          <div class="challenge-img-box">
+            <img src="images/challenge3.jpg" alt="" srcset="" />
+            <span class="live">Now Live</span>
+          </div>
+          <div class="challenge-text-box">
+            <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam,
+              laborum.
+            </p>
+            <i class="fas fa-angle-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Contant section -->
     <section class="contact" id="contactMe">
       <div>
@@ -147,7 +360,35 @@
       </div>
     </section>
     <footer>
-      
+      <div class="footer-column">
+        <div class="footer-copyright">
+          <p>
+            2022 <i class="far fa-copyright"></i> All rights reserved by JODLI
+            3A
+          </p>
+        </div>
+        <div class="footer-menu">
+          <a href="">Newsletter</a>
+          <a href="">Support</a>
+          <a href="">About</a>
+          <a href="">Courses</a>
+          <a href="">Challenges</a>
+        </div>
+        <div class="footer-icon">
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <div class="footer-chat-box">
+          <i class="fas fa-comments"></i>
+        </div>
+      </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
+
+<!-- Create & Design Modern Interior using Blender 2.8 -->
+<!-- Learn 3D Modeling using sketc-up -->
+<!-- Your First day in Blender 3D -->
+<!--  -->
