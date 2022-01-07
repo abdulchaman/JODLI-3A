@@ -110,6 +110,9 @@ nav {
 .icon {
   display: none;
 }
+.close-icon{
+  display: none;
+}
 /* neon button */
 .neon-button {
   font-size: 1rem;
@@ -710,6 +713,7 @@ footer {
     margin-right: 0.2rem;
   }
   .close-icon{
+    display: block;
     position: absolute;
     right: .1rem;
     top: 1rem;

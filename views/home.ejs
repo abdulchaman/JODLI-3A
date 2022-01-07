@@ -1,0 +1,19 @@
+<%- include('partials/header')%>
+<%if(success != ''){%>
+<div class="alert alert-success" role="alert">
+    <%= success%>
+  </div>
+  <%}%>
+<!-- main-section -->
+<%- include('main')%>
+<!-- about section -->
+<%- include('about')%>
+<!-- Courses Section -->
+<%- include('courses')%>
+<!-- Testimonial section -->
+<%- include('testimonial')%>
+<!-- Challenge Section -->
+<%- include('challenges')%>
+<!-- Contant section -->
+<%- include('contact')%> 
+<%- include('partials/footer')%>
